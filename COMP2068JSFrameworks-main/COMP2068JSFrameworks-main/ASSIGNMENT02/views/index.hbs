@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trader</title>
+ 
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="card">
+            <h1 class="card-header text-center">Welcome to Stock Trader</h1>
+            <div class="card-body">
+                <p class="card-text">Explore and manage your stock portfolio with ease.</p>
+                 {{#if user}}
+                    <a href="/stocks" class="btn btn-primary">View Stocks</a>
+                {{else}}
+                    
+                    <a href="/login" class="btn btn-primary">Login</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/scripts.js"></script> <!-- Add your scripts if needed -->
+</body>
+</html>

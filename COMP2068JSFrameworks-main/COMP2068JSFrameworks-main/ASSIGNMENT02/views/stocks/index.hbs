@@ -1,0 +1,35 @@
+<h1>{{title}}</h1>
+<p> This is a List of Stocks in my DB</p>
+
+<a href = "/stocks/add">Adding new Stock</a>
+
+<table>
+    <thead>
+
+            <th>Name</th>
+            <th>Value</th>
+            <th>Purchase Date</th>
+            <th>Sell Date</th>
+            <th>Edit/Delete</th>
+
+    </thead>
+    <tbody>
+        {{#each dataset}} 
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.value}}</td>
+            <td>{{this.purchDate}}</td>
+            <td>{{this.soldOn}}</td>
+            <td> 
+
+                <a href="/stocks/edit/{{this._id}}" class="btn btn-primary">Edit</a>
+                <a href="/stocks/delete/{{this._id}}" class="btn btn-danger" onclick="confirmDeletion()">Delete</a>
+            </td>
+
+        </tr>
+        
+        {{/each}}      
+    </tbody>
+
+</table>
+
